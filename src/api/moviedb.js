@@ -14,7 +14,7 @@ const getMovieData = async config => {
 		const { region, movieId } = config || {};
 		v3Client.movie
 			.details(movieId, {
-				language: "pt-br",
+				language: "en",
 				region
 			})
 			.then(response => resolve(response))
@@ -26,7 +26,7 @@ const getPopularMovies = async config => {
 		const { page, region } = config || {};
 		v3Client.movie
 			.popular({
-				language: "pt-br",
+				language: "en",
 				page,
 				region
 			})
@@ -46,7 +46,7 @@ const getLastestMovies = async config => {
 		v3Client.discover
 			.movie({
 				sort_by: "release_date.desc",
-				language: "pt-br",
+				language: "en",
 				page,
 				region,
 				"primary_release_date.lte": today(),
@@ -63,7 +63,7 @@ const getLastestMovies = async config => {
 const getMoviesGenres = async () => {
 	return new Promise((resolve, reject) => {
 		v3Client.genre
-			.movieList({ language: "pt-br" })
+			.movieList({ language: "en" })
 			.then(response => resolve(response))
 			.catch(error => reject(error));
 	});

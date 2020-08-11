@@ -1,6 +1,6 @@
 <template>
 	<div class="movie-rating" v-if="rating">
-		<label for="rating-inline" class="mt-auto">Classificação:</label>
+		<label for="rating-inline" class="mt-auto">Classification:</label>
 		<b-form-rating v-model="movieStars" readonly precision="2" />
 		<p class="text-center">{{ movieStars }}/5</p>
 	</div>

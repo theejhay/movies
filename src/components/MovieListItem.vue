@@ -13,7 +13,7 @@
 		<div class="card-body d-flex flex-column p-2">
 			<h5 class="card-title mt-auto">{{ movie.title }}</h5>
 
-			<p class="card-text">Data de lançamento: {{ movie.release_date }}</p>
+			<p class="card-text">Release date of: {{ movie.release_date }}</p>
 			<MovieGenres
 				:movieGenresId="this.movie.genre_ids"
 				:allMoviesGenres="this.genres"
@@ -23,7 +23,7 @@
 			<MovieRating :rating="this.movie.vote_average" />
 
 			<b-link :to="`/movie/${movie.id}`" class="btn btn-primary mt-3">
-				Mais detalhes
+				More details
 			</b-link>
 		</div>
 	</div>

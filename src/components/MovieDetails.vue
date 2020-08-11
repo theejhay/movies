@@ -20,9 +20,9 @@
 			</div>
 			<div class="col-lg-9 col-12 m-auto py-2 black-background text-white">
 				<div class="card-body d-flex flex-column p-2">
-					<h5 class="card-title">Titulo: {{ movie.title }}</h5>
+					<h5 class="card-title">Title: {{ movie.title }}</h5>
 					<p class="card-text">{{ movie.overview }}</p>
-					<p class="card-text">Data de lançamento: {{ movie.release_date }}</p>
+					<p class="card-text">Released Date of: {{ movie.release_date }}</p>
 
 					<MovieGenres
 						:movieGenresId="movie.genre_ids || movie.genres"

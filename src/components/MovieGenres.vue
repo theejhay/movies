@@ -1,6 +1,6 @@
 <template>
 	<div class="movie-genres" v-if="movieGenresId && allMoviesGenres">
-		Generos:
+		Genres:
 		<span v-for="(genre, key) in genres" :key="genre.id">
 			<span v-if="key !== 0">, </span>
 			<span>{{ genre.name }}</span>
